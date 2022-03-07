@@ -22,8 +22,7 @@ const Home = () => {
 
             <nav className="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
                 style={{ display: "none" }} id="mySidebar">
-                <a href="javascript:void(0)" className="w3-bar-item w3-button w3-large w3-padding-16">Close
-                    ×</a>
+                <a href="javascript:void(0)" className="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
                 <a href="#about" className="w3-bar-item w3-button">ABOUT</a>
                 <a href="#team" className="w3-bar-item w3-button">TEAM</a>
                 <a href="#work" className="w3-bar-item w3-button">WORK</a>
@@ -58,33 +57,8 @@ const Home = () => {
                     <i className="fa fa-twitter w3-hover-opacity"></i>
                     <i className="fa fa-linkedin w3-hover-opacity"></i>
                 </div>
-                <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-                    className="w3-hover-text-green">w3.css</a></p>
+                <p>Powered by<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" className="w3-hover-text-green"> w3.css </a></p>
             </footer>
-
-            {/* <script>
-    function onClick(element) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
-    // Toggle between showing and hiding the sidebar when clicking the menu icon
-    var mySidebar = document.getElementById("mySidebar");
-    function w3_open() {
-      if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-      } else {
-        mySidebar.style.display = 'block';
-      }
-    }
-
-    // Close the sidebar with the close button
-    function w3_close() {
-      mySidebar.style.display = "none";
-    }
-  </script> */}
-
         </>
     )
 }
