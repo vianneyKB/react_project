@@ -1,7 +1,5 @@
-export const getData = () => {
-    // call the API
-    fetch("https://jsonplaceholder.typicode.com/photos")
-        .then(response => response.json())
-        .then((res) => { console.log(res) })
-        .catch((err) => { console.log(err) });
+const getData = () => {
+    // call the API and limiting the number of requests to 9 items
+    return fetch("https://jsonplaceholder.typicode.com/album/1/photos/?_limit=9");
 }
+export default getData;

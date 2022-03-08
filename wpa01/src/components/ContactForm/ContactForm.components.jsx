@@ -20,6 +20,7 @@ const ContactForm = () => {
         email: "",
         messageRef: "",
     };
+    // adding validation
     const validationSchema = Yup.object().shape({
         firstName: Yup.string()
             .test(
@@ -66,27 +67,27 @@ const ContactForm = () => {
                     <Form className="form">
                         {!successful && (
                             <div>
-                                <div className="firstName">
-                                    <label htmlFor="firstName" id="nameLabel">First Name</label>
-                                    <Field name="firstName" type="text" className="form-control" />
+                                <div className="form-group">
+                                    <label htmlFor="firstName">First Name</label>
+                                    <Field name="firstName" type="text" className="form-input" />
                                     <ErrorMessage name="firstName" component="div" className="alert alert-danger" />
                                 </div>
 
-                                <div className="lastName">
+                                <div className="form-group">
                                     <label htmlFor="lastName">Last Name</label>
-                                    <Field name="lastName" type="text" className="form-control" />
+                                    <Field name="lastName" type="text" className="form-input" />
                                     <ErrorMessage name="lastName" component="div" className="alert alert-danger" />
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="email">Email</label>
-                                    <Field name="email" type="email" className="form-control" />
+                                    <Field name="email" type="email" className="form-input" />
                                     <ErrorMessage name="email" component="div" className="alert alert-danger" />
                                 </div>
 
                                 <div className="form-group">
                                     <label htmlFor="message">message</label>
-                                    <Field name="message" type="text" className="form-control" />
+                                    <Field name="message" as="textarea" className="form-textarea" />
                                     <ErrorMessage name="message" component="div" />
                                 </div>
                                 <div className="form-group">

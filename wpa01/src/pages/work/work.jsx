@@ -1,5 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+//import axios from 'axios';
+import getData from '../../../src/util/util'
+
 const Work = () => {
+    // creating a state variable to call images and a fction that will update it
+    // and initialize it to en empty array
+    const [images, setImages] = useState([]);
+
+
+    useEffect(() => {
+        fetchImages();
+    }, []);
+
+    const fetchImages = () => {
+
+        getData().then(response => response.json())
+            .then((res) => {
+                console.log(res)
+                setImages(res)
+            })
+            .catch((err) => { console.log(err) });
+    }
 
     return (
         <>
@@ -28,12 +49,21 @@ const Work = () => {
             </nav>
 
             <div className="w3-container" style={{ padding: "128px 16px" }} id="work">
-                <h3 className="w3-center">OUR WORK</h3>
-                <p className="w3-center w3-large">What we've done for people</p>
 
-                <div className="w3-row-padding" style={{ marginTop: "64px" }}>
+                <h3 className="w3-center" style={{ color: "black" }}>OUR WORK</h3>
+                <p className="w3-center w3-large" style={{ color: "black" }}>What we've done for people</p>
+
+                {images.map((photos) => (
+
                     <div className="w3-col l3 m6">
-                        <img src="/w3images/tech_mic.jpg" style={{ width: "100%" }} className="w3-hover-opacity" alt="A microphone" />
+                        <img src={photos.url} style={{ width: "100%" }} className="w3-hover-opacity" alt="A microphone" />
+                    </div>
+
+                ))}
+
+                {/* <div className="w3-row-padding" style={{ marginTop: "64px" }}>
+                    <div className="w3-col l3 m6">
+                        <img src="" style={{ width: "100%" }} className="w3-hover-opacity" alt="A microphone" />
                     </div>
                     <div className="w3-col l3 m6">
                         <img src="/w3images/tech_phone.jpg" style={{ width: "100%" }} className="w3-hover-opacity" alt="A phone" />
@@ -44,8 +74,8 @@ const Work = () => {
                     <div className="w3-col l3 m6">
                         <img src="/w3images/tech_sound.jpg" style={{ width: "100%" }} className="w3-hover-opacity" alt="Soundbox" />
                     </div>
-                </div>
-
+                </div> */}
+                {/* 
                 <div className="w3-row-padding w3-section">
                     <div className="w3-col l3 m6">
                         <img src="/w3images/tech_tablet.jpg" style={{ width: "100%" }} className="w3-hover-opacity" alt="A tablet" />
@@ -59,7 +89,7 @@ const Work = () => {
                     <div className="w3-col l3 m6">
                         <img src="/w3images/tech_tableturner.jpg" style={{ width: "100%" }} className="w3-hover-opacity" alt="A tableturner" />
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div id="modal01" className="w3-modal w3-black" >
@@ -80,7 +110,7 @@ const Work = () => {
                     <i className="fa fa-twitter w3-hover-opacity"></i>
                     <i className="fa fa-linkedin w3-hover-opacity"></i>
                 </div>
-                <p>Powered by<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" className="w3-hover-text-green">w3.css</a></p>
+                <p>Powered by <a href="{https://www.w3schools.com/w3css/default.asp}" title="W3.CSS" target="_blank" className="w3-hover-text-green">w3.css</a></p>
             </footer>
 
             {/* <script>
