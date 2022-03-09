@@ -4,16 +4,13 @@ const Home = () => {
 
     return (
         <>
-            <ContactForm />
             <div className="w3-top">
                 <div className="w3-bar w3-white w3-card" id="myNavbar">
                     <a href="#home" className="w3-bar-item w3-button w3-wide">LOGO</a>
-
                     <div className="w3-right w3-hide-small">
                         <a href="/work" className="w3-bar-item w3-button"><i className="fa fa-th"></i> WORK</a>
                         <a href="/contact" className="w3-bar-item w3-button"><i className="fa fa-envelope"></i> CONTACT</a>
                     </div>
-
                     <a href="javascript:void(0)" className="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium">
                         <i className="fa fa-bars"></i>
                     </a>
@@ -46,6 +43,9 @@ const Home = () => {
                     <i className="fa fa-linkedin w3-hover-opacity"></i>
                 </div>
             </header>
+
+            <ContactForm />
+
 
             <footer className="w3-center w3-black w3-padding-64">
                 <a href="#home" className="w3-button w3-light-grey"><i className="fa fa-arrow-up w3-margin-right"></i>To the top</a>

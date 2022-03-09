@@ -10,7 +10,7 @@ function App() {
   // const max = 9;
   // // use State  for Images
   // const [images, setImages] = useState([]);
-  // const [limit, setLimit] = useState(9);
+  // const [limit, setLimit] = useState();
 
   useEffect(() => {
     getData();
