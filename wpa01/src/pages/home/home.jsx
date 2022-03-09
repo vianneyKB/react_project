@@ -43,9 +43,8 @@ const Home = () => {
                     <i className="fa fa-linkedin w3-hover-opacity"></i>
                 </div>
             </header>
-
+            {/* using conatct form  */}
             <ContactForm />
-
 
             <footer className="w3-center w3-black w3-padding-64">
                 <a href="#home" className="w3-button w3-light-grey"><i className="fa fa-arrow-up w3-margin-right"></i>To the top</a>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-//import { register } from "../slices/auth";
 import { clearMessage } from "../../util/slices/message";
 
 const ContactForm = () => {
@@ -79,9 +78,9 @@ const ContactForm = () => {
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="message">message</label>
-                                        <Field name="message" as="textarea" className="form-control form-textarea" />
-                                        <ErrorMessage name="message" component="div" />
+                                        <label htmlFor="messageRef">message</label>
+                                        <Field name="messageRef" as="textarea" className="form-control form-textarea" />
+                                        <ErrorMessage name="messageRef" component="div" />
                                     </div>
                                     <div className="form-group">
                                         <button type="submit" className="btn btn-primary mr-2">Send</button>
